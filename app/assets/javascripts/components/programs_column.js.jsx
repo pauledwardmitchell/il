@@ -8,7 +8,7 @@ const ProgramsColumn = React.createClass({
         <h2>Programs</h2>
         
         <div>
-        {this.props.data.map(function(program) {
+        {this.props.programs.map(function(program) {
           return <ProgramCell key={program.id} program={program} />
           }
         )}
