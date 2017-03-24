@@ -1,17 +1,19 @@
 
 body {
   background: url('https://iso.500px.com/wp-content/uploads/2015/12/stock-photo-125301449-1500x822.jpg');
-
 }
 
-
-.cell-container-left {
+.programs-column-container {
   margin-left: 20%;
   padding-top: 100px;
   height: 400px; 
   width: 400px;
   overflow: auto;
   float: left;
+
+  h2 {
+    margin-left: 12%;
+  }
 }
 
 .cell-container-right {
