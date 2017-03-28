@@ -1,21 +1,40 @@
 
 const TracksColumn = React.createClass({
 
-  render: function() {
-  	return(
-    <div className="cell-container-right">
+  emptyColumn: function() {
+    return(
+      <div>
+      </div>
+    )
+  },
 
-      <h2>Selected Program Title</h2>
+  allTracks: function() {
+    return(
+      <div className="cell-container-right">
 
-    {this.props.displayedTracks.map(function(track) {
+        <h2>Selected Program Title</h2>
+
+        {this.props.displayedTracks.map(function(track) {
           return <TrackCell 
                    key={track.id} 
                    track={track} />
           }
         )}
-    </div>
+      </div>
 
   	)
+  },
+
+  renderColumn: function() {
+    if (this.props.displayedTracks.length === 0) {
+      return this.emptyColumn()
+    } else {
+      return this.allTracks()
+    }
+  },
+
+  render: function() {
+  	return this.renderColumn()
   }
 	
 })

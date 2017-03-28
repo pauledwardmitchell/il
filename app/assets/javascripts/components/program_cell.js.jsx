@@ -1,14 +1,18 @@
 
 const ProgramCell = React.createClass({
 
-  handleClick: function() {
-    this.props.setTracks(this.props.program.id)
+  onClick: function() {
+    this.handleClick(this.props.program.id)
+  },
+
+  handleClick: function(id) {
+    this.props.setTracks(id)
   },
 
   render: function() {
 
   	return(
-  	<div className="cell" onClick={this.handleClick}>
+  	<div className="cell" onClick={this.onClick}>
       <div className="icon">
         <img className="icon-img" src="http://cdn.calm.com/images/qK3IeqhiJP/84EPm1pP8/program-ic-qK3IeqhiJP.png?v=1486455650733"></img>
       </div>
