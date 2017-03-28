@@ -15,7 +15,7 @@ const TrackCell = React.createClass({
           <div className="right-container">
             <div className="right-decorator">
             	<div className="">
-                <a href="">
+                <a href={`/tracks/${this.props.track.id}`}>
             	    <img className="play-arrow" src="/assets/play-arrow-2x.png"></img>
                 </a>
             	</div>

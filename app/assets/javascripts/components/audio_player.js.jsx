@@ -56,9 +56,9 @@ const AudioPlayer = React.createClass({
 
   buttonIcon: function() {
   	if (this.state.isPlaying === true) {
-  	  return "./assets/pause-2x.png"
+  	  return "/assets/pause-2x.png"
   	} else {
-  	  return "./assets/play-arrow-2x.png"	
+  	  return "/assets/play-arrow-2x.png"	
   	}
   },
 
@@ -67,7 +67,7 @@ const AudioPlayer = React.createClass({
     return(
         <div style={this.props.style.circleBox}>
           <audio ref={(ref) => { this.audioEl = ref; }} onPlay={this.onPlay}  >
-            <source src="/1812.m4a"></source>
+            <source src={this.props.track.link}></source>
           </audio>
           <a style={this.props.style.button} onClick={this.togglePlaying} >
             <img src={this.buttonIcon()} />
