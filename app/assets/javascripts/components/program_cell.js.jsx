@@ -1,10 +1,14 @@
 
 const ProgramCell = React.createClass({
 
+  handleClick: function() {
+    this.props.setTracks(this.props.program.id)
+  },
+
   render: function() {
 
   	return(
-  	<div className="cell">
+  	<div className="cell" onClick={this.handleClick}>
       <div className="icon">
         <img className="icon-img" src="http://cdn.calm.com/images/qK3IeqhiJP/84EPm1pP8/program-ic-qK3IeqhiJP.png?v=1486455650733"></img>
       </div>
@@ -17,7 +21,7 @@ const ProgramCell = React.createClass({
       <div className="right-container">
         <div className="right-decorator">
           <div>
-            <a href="">
+            <a>
         	    <img className="chevron" src="/assets/chevron_right.png"></img>
             </a>
           </div>
