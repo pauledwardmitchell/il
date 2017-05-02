@@ -2,31 +2,46 @@ const ProgramsColumn = React.createClass({
 
   getInitialState: function(){
     return {
-      clickedProgramId: null
+      displayedTracks: []
     }
   },
 
   setProgramTracks: function(program_id) {
-  	this.setState({ clickedProgramId: program_id })
-  	this.props.getClickedProgram(this.state.clickedProgramId)
+    var clickedProgramTracks = []
+    var tracks = this.props.tracks
+
+    for (i = 0; i < tracks.length; i++) {
+      if (tracks[i].program_id === program_id) {
+      	clickedProgramTracks.push(this.props.tracks[i])
+      }
+    }
+
+    this.setState({ displayedTracks: clickedProgramTracks })
+
   },
 
   render: function() {
   	return(
+  	<div className="flex-div">
       <div className="programs-column-container">
-  
+
         <h2>Programs</h2>
-        
+
         <div>
-        {this.props.programs.map(function(program) {
-          return <ProgramCell 
-                   key={program.id} 
+        {this.props.programs.map((program) => {
+          return <ProgramCell
+                   key={program.id}
                    program={program}
                    setTracks={this.setProgramTracks} />
-          }.bind(this))}
+          }
+          )}
         </div>
 
       </div>
+
+      <TracksColumn displayedTracks={this.state.displayedTracks}/>
+
+    </div>
 
 
   	)

@@ -60,11 +60,11 @@ const AudioInterface = React.createClass({
   	return (
       <div style={styles.center}>
         <section style={styles.text} >
-          <p >Title of the track</p>
+          <p>{this.props.track.title}</p>
           <p>sub-title of the track</p>
         </section>
         
-        <AudioPlayer style={styles} />
+        <AudioPlayer style={styles} track={this.props.track} />
 
       </div>
   	)
