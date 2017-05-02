@@ -15,8 +15,8 @@ const TracksColumn = React.createClass({
         <h2>Selected Program Title</h2>
 
         {this.props.displayedTracks.map(function(track) {
-          return <TrackCell 
-                   key={track.id} 
+          return <TrackCell
+                   key={track.id}
                    track={track} />
           }
         )}
@@ -36,5 +36,5 @@ const TracksColumn = React.createClass({
   render: function() {
   	return this.renderColumn()
   }
-	
+
 })

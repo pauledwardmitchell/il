@@ -1,17 +1,17 @@
 
 const TrackCell = React.createClass({
-  
+
   render: function() {
   	return(
         <div className="cell-right">
           <div className="icon">
           </div>
-      
+
           <div className="text-container">
-            <div className="title">{this.props.track.title}</div>
-            <div className="sub-title">{this.props.track.duration} mins</div>
+            <div className="title right">{this.props.track.title}</div>
+            <div className="sub-title right">{this.props.track.duration} mins</div>
           </div>
-      
+
           <div className="right-container">
             <div className="right-decorator">
             	<div className="">
@@ -24,4 +24,4 @@ const TrackCell = React.createClass({
         </div>
   	)
   }
-}) 
+})

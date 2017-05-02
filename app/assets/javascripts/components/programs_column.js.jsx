@@ -22,23 +22,23 @@ const ProgramsColumn = React.createClass({
 
   render: function() {
   	return(
-  	<div>
+  	<div className="flex-div">
       <div className="programs-column-container">
-  
+
         <h2>Programs</h2>
-        
+
         <div>
-        {this.props.programs.map(function(program) {
-          return <ProgramCell 
-                   key={program.id} 
+        {this.props.programs.map((program) => {
+          return <ProgramCell
+                   key={program.id}
                    program={program}
                    setTracks={this.setProgramTracks} />
-          }.bind(this)
+          }
           )}
         </div>
 
       </div>
-      
+
       <TracksColumn displayedTracks={this.state.displayedTracks}/>
 
     </div>

@@ -5,4 +5,7 @@ class ProgramsController < ApplicationController
   	@tracks = Track.all
   end
 
+  def test
+  end
+
 end

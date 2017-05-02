@@ -1,15 +1,38 @@
-
 body {
-  background: url('https://iso.500px.com/wp-content/uploads/2015/12/stock-photo-125301449-1500x822.jpg');
+  margin: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.flex-div {
+}
+
+.big-container {
+  position: relative;
+  overflow: hidden;
+  max-height: 1000px;
+  min-hieght: 600px
+}
+
+.big-container-img {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: .6;
 }
 
 .programs-column-container {
-  margin-left: 20%;
+  margin-left: 15%;
   padding-top: 100px;
-  height: 400px; 
-  width: 400px;
+  height: 600px;
+  width: 420px;
   overflow: auto;
   float: left;
+  animation: fadein 2s;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(-30deg, rgba(52, 120, 221, 0.9) 35%, rgba(59, 190, 236, 0.9) 100%);
 
   h2 {
     margin-left: 12%;
@@ -18,9 +41,25 @@ body {
 
 .cell-container-right {
   padding-top: 100px;
-  height: 400px; 
-  width: 400px;
+  height: 400px;
+  width: 40%;
   overflow: auto;
+  position: absolute;
+  top: 0px;
+  right: 0;
+
+  h2 {
+    margin-left: 12%;
+  }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 .cell {
@@ -29,12 +68,11 @@ body {
   line-height: 80px;
   height: 80px;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   border: 1px solid black;
   width: 330px;
   margin-left: 9%;
   background-color: #3f4247;
-
 
   &:hover {
     background-color: darken(#3f4247, 10%);
@@ -46,15 +84,15 @@ body {
   line-height: 80px;
   height: 80px;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   border-bottom: 1px solid black;
   width: 330px;
   margin-left: 9%;
-  background-color: #979da8;
+  animation: fadein .5s;
 
 
   &:hover {
-    background-color: darken(#979da8, 10%);
+    background-color: darken(black, 10%);
   }
 }
 
@@ -71,7 +109,6 @@ body {
   width: 40px;
   display: block;
   margin-top: 20px;
-  
 }
 
 .text-container {
@@ -106,6 +143,10 @@ body {
     font-style: normal;
 }
 
+.right {
+  color: black;
+}
+
 .right-container {
   height: auto;
   width: 30px;
@@ -129,7 +170,7 @@ body {
 
 
 h1 {
-  text-align: center	
+  text-align: center
 }
 
 .b-table {
@@ -187,12 +228,12 @@ th {
     line-height: 20px;
     padding: 20px;
     overflow: visible;
-  
+
     /* Position of the tooltip */
     position: absolute;
     z-index: 999999;
     bottom: 120%;
-    left: 50%; 
+    left: 50%;
     margin-left: -120px;
 
   }
@@ -201,9 +242,9 @@ th {
     .tooltiptext {
       visibility: visible;
     }
-  
+
   }
-  
+
 }
 
 .b-tooltip {
@@ -226,12 +267,12 @@ th {
     line-height: 20px;
     padding: 20px;
     overflow: visible;
-  
+
     /* Position of the tooltip */
     position: absolute;
     z-index: 999999;
     bottom: 120%;
-    left: 85%; 
+    left: 85%;
     margin-left: -120px;
 
   }
@@ -240,9 +281,9 @@ th {
     .tooltiptext {
       visibility: visible;
     }
-  
+
   }
-  
+
 }
 
 
