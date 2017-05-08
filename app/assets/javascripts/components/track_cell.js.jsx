@@ -8,7 +8,9 @@ const TrackCell = React.createClass({
           </div>
 
           <div className="text-container">
-            <div className="title right">{this.props.track.title}</div>
+
+            <div className="title right"><a href={`/tracks/${this.props.track.id}`}>{this.props.track.title}</a></div>
+
             <div className="sub-title right">{this.props.track.duration} mins</div>
           </div>
 
