@@ -2,19 +2,24 @@ body {
   margin: 0;
   font-family: Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;}
 
-.flex-div {
+.programs-container {
+  margin: 0px auto 0px auto;
+  height: 100%;
+  width: 1000px;
+  /* min-width: 840px; */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .big-container {
   position: relative;
   overflow: hidden;
   max-height: 1000px;
-  min-hieght: 600px
+  min-height: 840px;
 }
 
 .big-container-img {
-  left: 0;
-  top: 0;
   width: 100%;
   height: auto;
   opacity: .6;
@@ -23,7 +28,7 @@ body {
 .programs-column-container {
   margin-left: 15%;
   padding-top: 100px;
-  height: 600px;
+  height: 100%;
   width: 420px;
   overflow: auto;
   float: left;
@@ -40,7 +45,7 @@ body {
 
 .cell-container-right {
   padding-top: 100px;
-  height: 400px;
+  height: 100%;
   width: 40%;
   overflow: auto;
   position: absolute;
@@ -71,12 +76,19 @@ body {
   border: 1px solid black;
   width: 330px;
   margin-left: 9%;
-  background-color: #3f4247;
+  background: linear-gradient(-30deg, rgba(52, 120, 221, 0.9) 35%, rgba(59, 190, 236, 0.9) 100%);
 
   &:hover {
-    background-color: darken(#3f4247, 10%);
+    box-shadow: 0 0 20px 2px #262626;
+    cursor: pointer;
   }
+
+  &.active-cell {
+    box-shadow: 0 0 20px 2px #262626;
+  }
+
 }
+
 
 .cell-right {
   margin-bottom: 10px;
@@ -91,7 +103,14 @@ body {
 
 
   &:hover {
-    background-color: darken(black, 10%);
+    .text-container .title, .sub-title {
+      font-weight: bold;
+      opacity: .6;
+      cursor: pointer;
+    }
+    .play-arrow {
+      opacity: .5;
+    }
   }
 }
 

@@ -1,8 +1,21 @@
 
 const ProgramCell = React.createClass({
 
+  getInitialState: function() {
+    return {
+    }
+  },
+
   onClick: function() {
     this.handleClick(this.props.program.id)
+  },
+
+  cellClass: function() {
+    if ( this.props.ifActive === true) {
+      return 'cell active-cell'
+    } else {
+      return 'cell'
+    }
   },
 
   handleClick: function(id) {
@@ -12,7 +25,7 @@ const ProgramCell = React.createClass({
   render: function() {
 
   	return(
-  	<div className="cell" onClick={this.onClick}>
+  	<div className={this.cellClass()} onClick={this.onClick}>
       <div className="icon">
         <img className="icon-img" src="http://cdn.calm.com/images/qK3IeqhiJP/84EPm1pP8/program-ic-qK3IeqhiJP.png?v=1486455650733"></img>
       </div>
