@@ -84,7 +84,7 @@ body {
   }
 
   &.active-cell {
-    box-shadow: 0 0 20px 2px #262626;
+    box-shadow: 0 0 20px 2px #C6DEEC;
   }
 
 }
@@ -148,6 +148,11 @@ body {
     font-weight: 300;
     line-height: 140%;
     font-style: normal;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .sub-title {

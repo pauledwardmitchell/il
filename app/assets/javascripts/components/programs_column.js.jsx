@@ -27,18 +27,6 @@ const ProgramsColumn = React.createClass({
     this.setState({ activeCellId: program_id })
   },
 
-  // cellClass: function() {
-  //   var programs = this.props.programs
-
-  //   for (i = 0; i < programs.length; i++) {
-  //     if (programs[i].program_id === this.state.activeCellId) {
-  //       return 'active'
-  //     } else {
-  //       return null
-  //     }
-  //   }
-  // },
-
   ifActive: function(program_id) {
     if (this.state.activeCellId === program_id ) {
       return true
@@ -61,11 +49,10 @@ const ProgramsColumn = React.createClass({
                    key={program.id}
                    program={program}
                    ifActive={this.ifActive(program.id)}
-                   // onClick={this.handleCellClick(program.id)}
-                   // cellClass={this.cellClass}
                    setTracks={this.setProgramTracks} />
           }
           )}
+          <div className='cell'></div> //empty cell hidden by footer
         </div>
 
       </div>

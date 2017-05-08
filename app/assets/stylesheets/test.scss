@@ -61,7 +61,7 @@ ul {
 .footer {
     position: absolute;
     bottom: -200px;
-    height: 200px;
+    height: 240px;
     width: 100%;
     z-index: 999;
     background-image: linear-gradient(270deg,#3bbeec,#3478dd),linear-gradient(135deg,rgba(121,58,235,.5),rgba(121,58,235,0));
@@ -98,7 +98,7 @@ ul {
   display: flex;
   max-width: 794px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 10px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -109,6 +109,11 @@ ul {
 
   ul li {
     margin-top: 10px;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   ul {

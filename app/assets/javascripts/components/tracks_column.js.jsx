@@ -20,6 +20,8 @@ const TracksColumn = React.createClass({
                    track={track} />
           }
         )}
+        <div className='cell'> //empty cell hidden by footer
+        </div>
       </div>
 
   	)
