@@ -36,6 +36,35 @@ ul {
   -webkit-padding-start: 40px;
 }
 
+.page {
+  height: 100%;
+  width: 100%;
+  background: #5BA4C8;
+}
+
+.first {
+  height: 600px;
+  width: auto;
+  background: #8591D6;
+}
+
+.square {
+  height: 200px;
+  width: 200px;
+  background: #252E6F;
+  margin-top: 50px;
+  margin-left: 50px;
+  opacity: 0;
+  /* transform: translateY(50px); */
+  transition: all 1s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+
 .covered {
   color: #fff;
   font-size: 16px;
