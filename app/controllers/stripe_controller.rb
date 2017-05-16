@@ -1,6 +1,7 @@
 class StripeController < ApplicationController
 
   protect_from_forgery :except => :webhook
+  authenticate_user! :except => :webhook
 
   def webhook
     # Capture the event information from the webhook params
