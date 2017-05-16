@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :tracks, only: [:show]
 
+  get '/webhook', to: 'stripe#webhook'
+
   resources :charges
 
 end
