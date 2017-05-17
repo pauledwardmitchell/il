@@ -4,9 +4,16 @@ class StripeController < ApplicationController
 
   def webhook
 
-    event_json = JSON.parse(request.body.read)
+    if request.headers['Content-Type'] == 'application/json'
+      data = JSON.parse(request.body.read)
+    else
+      # application/x-www-form-urlencoded
+      data = params.as_json
+    end
 
-    # Do something with event_json
+    # event_json = JSON.parse(request.body.read)
+
+    # # Do something with event_json
 
     status 200
 
