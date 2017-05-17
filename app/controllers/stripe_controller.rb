@@ -12,6 +12,9 @@ class StripeController < ApplicationController
     end
 
     if params[:type] == "account.updated"
+      Notification.create(name: 'account updated')
+    end
+
 
 
     # event_json = JSON.parse(request.body.read)
