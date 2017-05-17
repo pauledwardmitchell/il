@@ -3,13 +3,21 @@ class StripeController < ApplicationController
   protect_from_forgery :except => :webhook
 
   def webhook
-    # Capture the event information from the webhook params
-    event_id = params[:event]
 
-    # Verify that the event isn't forged to your Stripe account
-    event = Stripe::Event.retrieve(event_id)
+    event_json = JSON.parse(request.body.read)
 
-    render status: 200
+    # Do something with event_json
+
+    status 200
+
+
+    # # Capture the event information from the webhook params
+    # event_id = params[:event]
+
+    # # Verify that the event isn't forged to your Stripe account
+    # event = Stripe::Event.retrieve(event_id)
+
+    # render status: 200
   end
 
 end
