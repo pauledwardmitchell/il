@@ -15,7 +15,7 @@ class StripeController < ApplicationController
 
     # # Do something with event_json
 
-    status 200
+    # status 200
 
 
     # # Capture the event information from the webhook params
