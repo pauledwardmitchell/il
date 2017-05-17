@@ -12,8 +12,8 @@ class StripeController < ApplicationController
     # end
 
     Notification.create(name: params[:type],
-                        stripe_id: params['stripe']['id'],
-                        customer_id: params['stripe']['data']['object']['customer'])
+                        stripe_id: params[:type],
+                        customer_id: params[:type])
 
 
 
