@@ -4,16 +4,16 @@ class StripeController < ApplicationController
 
   def webhook
 
-    if request.headers['Content-Type'] == 'application/json'
-      data = JSON.parse(request.body.read)
-    else
-      # application/x-www-form-urlencoded
-      data = params.as_json
-    end
+    # if request.headers['Content-Type'] == 'application/json'
+    #   data = JSON.parse(request.body.read)
+    # else
+    #   # application/x-www-form-urlencoded
+    #   data = params.as_json
+    # end
 
-    if params[:type] == "account.updated"
-      Notification.create(name: 'account updated')
-    end
+    Notification.create(name: params[:type],
+                        stripe_id: params['stripe']['id'],
+                        customer_id: params['stripe']['data']['object']['customer'])
 
 
 
