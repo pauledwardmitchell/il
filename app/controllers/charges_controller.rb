@@ -3,7 +3,33 @@ class ChargesController < ApplicationController
   def new
   end
 
+  def monthly_subscription_create
 
+    if current_user.stripe_customer_id == nil
+
+      customer = Stripe::Customer.create(
+        :email => params[:stripeEmail],
+        :source  => params[:stripeToken]
+      )
+
+      current_user.stripe_customer_id = customer.id
+
+    end
+
+    Stripe::Subscription.create(
+      :customer => current_user.stripe_customer_id,
+      :plan => "0001"
+    )
+
+  end
+
+  def yearly_subscription_create
+
+  end
+
+  def forever_subscription_create
+
+  end
 
   def create
     # Amount in cents

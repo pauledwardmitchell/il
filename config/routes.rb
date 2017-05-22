@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   resources :charges
 
+  post 'monthly_subscription', to: 'charges#monthly_subscription_create'
+
 end
