@@ -3,4 +3,22 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  private
+
+  def access
+
+    stripe_subscription_status =
+      Stripe::Customer.retrieve(current_user.stripe_customer_id).subscriptions.data[0].status
+
+    if self.access_forever == true
+      true
+    elsif stripe_subscription_status == 'active' || stripe_subscription_status == 'trialing'
+      true
+    else
+      false
+    end
+
+  end
+
 end
