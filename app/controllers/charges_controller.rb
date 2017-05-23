@@ -17,10 +17,14 @@ class ChargesController < ApplicationController
 
     end
 
-    Stripe::Subscription.create(
+    subscription = Stripe::Subscription.create(
       :customer => current_user.stripe_customer_id,
       :plan => "0001"
     )
+
+    if subscription
+      #Mailer
+    end
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
