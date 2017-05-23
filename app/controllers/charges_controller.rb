@@ -13,6 +13,7 @@ class ChargesController < ApplicationController
       )
 
       current_user.stripe_customer_id = customer.id
+      current_user.save
 
     end
 
@@ -21,38 +22,60 @@ class ChargesController < ApplicationController
       :plan => "0001"
     )
 
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
   end
 
   def yearly_subscription_create
 
+    if current_user.stripe_customer_id == nil
+
+      customer = Stripe::Customer.create(
+        :email => params[:stripeEmail],
+        :source  => params[:stripeToken]
+      )
+
+      current_user.stripe_customer_id = customer.id
+      current_user.save
+
+    end
+
+    Stripe::Subscription.create(
+      :customer => current_user.stripe_customer_id,
+      :plan => "0002"
+    )
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
   end
 
   def forever_subscription_create
 
-  end
+    if current_user.stripe_customer_id == nil
 
-  def create
-    # Amount in cents
-    @amount = 500 #don't hard code this
+      customer = Stripe::Customer.create(
+        :email => params[:stripeEmail],
+        :source  => params[:stripeToken]
+      )
 
-    #take entered email
-    #search if there is a stripe customer obj in my account
-    #if so - get customer.id somehow to create charge with
-    #if not - make it by hitting code below
+      current_user.stripe_customer_id = customer.id
+      current_user.save
 
-    customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
-    )
+    end
 
     charge = Stripe::Charge.create(
-      :customer    => customer.id,
-      :amount      => @amount,
-      :description => 'Rails Stripe customer',
+      :customer    => current_user.stripe_customer_id,
+      :amount      => 19999,
+      :description => 'Rails Stripe customer FOREVER',
       :currency    => 'usd'
     )
 
-    binding.pry
+    if charge
+      current_user.access_forever = true
+      current_user.save
+    end
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
