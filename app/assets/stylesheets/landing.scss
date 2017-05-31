@@ -9,9 +9,11 @@
 
 
   z-index: 10;
+
   ul {
    list-style: none;
   }
+
   li {
     color: white;
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
@@ -29,5 +31,68 @@
 .landing-main {
   min-height: 450px;
   height: calc(100vh - 76px);
-  background: #fafafa
+  background: #fafafa;
 }
+
+.section-promos {
+  max-width: 2560px;
+  margin: 0 auto;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  z-index: 9999;
+
+  ul {
+    display: block;
+    min-height: 200px;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+
+    padding: 0;
+
+    li {
+      width: 25%;
+      min-height: 200px;
+      float: left;
+      background: red;
+      z-index: 99999;
+    }
+  }
+}
+
+#promo-1 {
+  background: blue;
+}
+
+#promo-2 {
+  background: black;
+}
+
+#promo-3 {
+  background: red;
+}
+
+#promo-4 {
+  background: green;
+}
+
+@media screen and (max-aspect-ratio: 9999/1) and (max-width: 1068px) and (min-aspect-ratio: 1/10000) and (min-width: 736px) {
+  .section-promos {
+    ul {
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-aspect-ratio: 9999/1) and (max-width: 735px) and (min-aspect-ratio: 1/10000) and (min-width: 0px) {
+  .section-promos {
+    ul {
+      li {
+        width: 100%;
+      }
+    }
+  }
+}
+
