@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "programs#index"
 
+  get '/landing', to: 'programs#landing'
   get '/test', to: 'programs#test'
 
   resources :tracks, only: [:show]
