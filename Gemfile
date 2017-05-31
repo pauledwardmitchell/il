@@ -22,6 +22,8 @@ gem 'devise'
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+
 end
 
 group :development do
