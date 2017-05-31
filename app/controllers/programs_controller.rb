@@ -8,4 +8,7 @@ class ProgramsController < ApplicationController
   def test
   end
 
+  def landing
+  end
+
 end

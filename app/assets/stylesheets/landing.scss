@@ -1,0 +1,33 @@
+
+.landing-nav {
+  height: 48px;
+  background: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+
+
+  z-index: 10;
+  ul {
+   list-style: none;
+  }
+  li {
+    color: white;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+}
+
+.landing-main {
+  min-height: 450px;
+  height: calc(100vh - 76px);
+  background: #fafafa
+}
