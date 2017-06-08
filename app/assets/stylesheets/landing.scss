@@ -6,12 +6,11 @@
   top: 0;
   width: 100%;
 
-
-
   z-index: 10;
 
   ul {
    list-style: none;
+   padding-left: 200px;
   }
 
   li {
@@ -20,6 +19,8 @@
     opacity: 1;
     font-size: 14px;
     font-weight: 400;
+    display: inline;
+    padding-left: 25px;
 
     &:hover {
       opacity: 0.6;
@@ -60,6 +61,11 @@
   }
 }
 
+.landing-footer {
+  background-color: #f2f2f2;
+  height: 200px;
+}
+
 #promo-1 {
   background: blue;
 }
@@ -75,6 +81,8 @@
 #promo-4 {
   background: green;
 }
+
+
 
 @media screen and (max-aspect-ratio: 9999/1) and (max-width: 1068px) and (min-aspect-ratio: 1/10000) and (min-width: 736px) {
   .section-promos {

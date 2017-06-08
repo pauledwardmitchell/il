@@ -11,4 +11,7 @@ class ProgramsController < ApplicationController
   def landing
   end
 
+  def teachers
+  end
+
 end
