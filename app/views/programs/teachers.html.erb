@@ -14,14 +14,7 @@
     <section class="teachers-info-box">
 
       <section class="teachers-text teachers-margin">
-        <section class="teachers-pictures-box">
-          <%= react_component 'TeacherPicLink' %>
-          <%= react_component 'TeacherPicLink' %>
-          <%= react_component 'TeacherPicLink' %>
-          <%= react_component 'TeacherPicLink' %>
-          <%= react_component 'TeacherPicLink' %>
-          <%= react_component 'TeacherPicLink' %>
-        </section>
+        <%= react_component 'TeacherPicLinks', { teachers: @teachers } %>
 
       </section>
 

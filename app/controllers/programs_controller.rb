@@ -12,6 +12,10 @@ class ProgramsController < ApplicationController
   end
 
   def teachers
+    @teachers = Teacher.all.order(:last_name)
+  end
+
+  def teacher
   end
 
 end
