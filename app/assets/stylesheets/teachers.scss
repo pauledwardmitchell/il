@@ -187,12 +187,12 @@ a {
   justify-content: center;
 }
 
-.top-programs-box-shadow {
+.top-program-box-shadow {
   margin-top: 1px;
   margin-right: 1px;
 }
 
-.top-programs-box {
+.top-program-box {
   overflow: hidden;
   margin-right: 0px;
   background-color: rgb(41, 51, 67);
@@ -205,7 +205,7 @@ a {
     color: #fff;
   }
 
-  .top-programs-box-pic {
+  .top-program-box-pic {
     background-color: rgb(34, 34, 34);
     background-image: url(https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/56d7cd1d5a3e600300bffd05_Find%20Happiness.jpg);
     background-size: cover;
@@ -281,6 +281,82 @@ a {
       }
     }
 
+  }
+
+}
+
+.after-top-program-box {
+  max-width: 650px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .square-program-box-shadow {
+    margin-top: 1px;
+    margin-right: 1px;
+
+    .square-program-box {
+      overflow: hidden;
+      margin-right: 0px;
+      background-color: rgb(41, 51, 67);
+      width: 300px;
+      height: 300px;
+
+      .square-program-box-pic {
+        background-color: rgb(34, 34, 34);
+        background-image: url("https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/56d7cd8f5a3e600300bffd0c_193838.jpg");
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        height: 300px;
+        width: 300px;
+        color: rgb(34, 34, 34);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .title {
+          width: auto;
+          padding: 16px 16px 64px;
+          font-size: 20px;
+          font-weight: 300;
+          letter-spacing: 0.8px;
+          color: rgb(255, 255, 255);
+          background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+
+        .bottom {
+          width: auto;
+          color: rgb(255, 255, 255);
+          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+
+          .bottom-centered {
+            padding: 16px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            .lock {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: .5;
+
+              &:hover {
+                opacity: 1;
+              }
+
+              img {
+                height: 48px;
+                width: 48px;
+              }
+            }
+          }
+        }
+        }
+      }
+    }
   }
 
 }
