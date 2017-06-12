@@ -1,0 +1,286 @@
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.teachers-container {
+  height: 100%;
+  width: auto;
+  background-color: #1c222e;
+}
+
+
+.teachers-padding-box {
+  padding-left: 0px;
+  padding-top: 54px;
+  padding-bottom: 48px;
+}
+
+.teachers-centering-box {
+  min-height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teachers-info-box {
+  border: 1px solid rgb(41, 51, 67);
+  border-radius: 5px;
+  background-color: rgba(41, 51, 67, 0.3);
+  max-width: 720px;
+  width: 100%;
+  align-items: center;
+  padding: 32px;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.teachers-text {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+
+  h1 {
+    margin: 0px; font-size: 20px; font-weight: 200;
+  }
+}
+
+.teachers-margin {
+  margin-bottom: 16px;
+}
+
+.teachers-pictures-box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  a {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    box-sizing: border-box;
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .inline {
+       min-width: 120px;
+       display: inline-block;
+
+       .borders {
+         height: 80px;
+         width: 80px;
+         border-radius: 40px;
+         margin-left: 16px;
+         margin-right: 16px;
+
+         img {
+           height: 80px;
+           width: 80px;
+           border-radius: 40px;
+         }
+       }
+      }
+    }
+  }
+}
+
+.teacher-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1c222e;
+}
+
+.teacher-padding-box {
+  padding-left: 0px;
+  padding-top: 54px;
+  padding-bottom: 48px;
+  min-height: 100%
+}
+
+.teacher-box-container {
+  width: 100%;
+  background-size: cover;
+}
+
+.teacher-box {
+  width: auto;
+  max-width: 100%;
+  padding: 48px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.teacher-box-centered {
+  margin: 0px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.teacher-picture-box {
+  margin: 0px auto;
+}
+
+.teacher-picture {
+  height: 180px;
+  width: 180px;
+  border-radius: 90px;
+  margin-left: 36px;
+  margin-right: 36px;
+
+  img {
+    height: 180px;
+    width: 180px;
+    border-radius: 90px;
+  }
+}
+
+.teacher-name {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  margin: 8px;
+  color: white;
+}
+
+.teacher-blurb {
+  font-size: 14px;
+  font-weight: 200;
+  margin: 8px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.teacher-programs-box {
+  margin: 0px auto;
+  max-width: 656px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.teacher-programs-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 32px 16px 16px;
+  color: white;
+}
+
+.teacher-programs-squares-box {
+  margin: 0px auto;
+  max-width: 650px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.top-programs-box-shadow {
+  margin-top: 1px;
+  margin-right: 1px;
+}
+
+.top-programs-box {
+  overflow: hidden;
+  margin-right: 0px;
+  background-color: rgb(41, 51, 67);
+  width: 600px;
+  height: 300px;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .top-programs-box-pic {
+    background-color: rgb(34, 34, 34);
+    background-image: url(https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/56d7cd1d5a3e600300bffd05_Find%20Happiness.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 300px;
+    width: 600px;
+    color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    animation: fadein .5s;
+
+    .title {
+      width: auto;
+      padding: 16px 16px 64px;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+      color: rgb(255, 255, 255);
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+
+      .free-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: 500;
+        background-color: rgb(253, 144, 116);
+        border-radius: 10px;
+        margin-top: 4px;
+        height: 20px;
+        width: 48px;
+      }
+    }
+
+    .bottom {
+      width: auto;
+      color: rgb(255, 255, 255);
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+
+      .bottom-centered {
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .play-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: .5;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          img {
+            height: 48px;
+            width: 48px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          text-align: right;
+        }
+      }
+    }
+
+  }
+
+}

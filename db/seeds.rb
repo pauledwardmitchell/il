@@ -32,3 +32,8 @@
 #   Track.create(title: program.title+' 10', duration: [9, 10, 11].sample, link: '/1812.m4a', program_id: program.id)
 #   Track.create(title: program.title+' 11', duration: [9, 10, 11].sample, link: '/1812.m4a', program_id: program.id)
 # end
+
+Teacher.create(first_name: 'Paul',
+               last_name: 'Mitchell',
+               pic_link: 'https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/5745cf09c2c78a0300cfb1a4',
+               blurb: 'In a cave in the woods, in his deep dark lair, through the long cold winter, sleeps a great brown bear')

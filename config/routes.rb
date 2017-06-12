@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get '/landing', to: 'programs#landing'
   get '/test', to: 'programs#test'
+  get '/teachers', to: 'programs#teachers'
+  get '/teacher', to: 'programs#teacher'
 
   resources :tracks, only: [:show]
 
