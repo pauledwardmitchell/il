@@ -316,6 +316,8 @@ a {
         justify-content: space-between;
         overflow: hidden;
 
+        animation: fadein .8s;
+
         .title {
           width: auto;
           padding: 16px 16px 64px;
@@ -324,6 +326,7 @@ a {
           letter-spacing: 0.8px;
           color: rgb(255, 255, 255);
           background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
 
         .bottom {
           width: auto;
@@ -354,7 +357,7 @@ a {
             }
           }
         }
-        }
+
       }
     }
   }

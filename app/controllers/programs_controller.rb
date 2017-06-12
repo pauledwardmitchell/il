@@ -16,6 +16,10 @@ class ProgramsController < ApplicationController
   end
 
   def teacher
+    @teacher = Teacher.first
+    @programs = []
+    @programs << Program.first
+    @programs << Program.last
   end
 
 end
