@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/teachers', to: 'programs#teachers'
   get '/teacher', to: 'programs#teacher'
 
+  get 'michael-jordan-laskey', to: 'programs#michaeljordanlaskey'
+
   resources :tracks, only: [:show]
 
   post '/webhook', to: 'stripe#webhook'

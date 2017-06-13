@@ -20,4 +20,9 @@ class ProgramsController < ApplicationController
     @programs = Program.take(10)
   end
 
+  def michaeljordanlaskey
+    @teacher = Teacher.first
+    @programs = Program.take(4)
+  end
+
 end
