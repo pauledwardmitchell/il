@@ -5,22 +5,7 @@
 
     <section class='teacher-box-container'>
 
-      <section class='teacher-box'>
-        <section class='teacher-box-centered'>
-          <section class='teacher-picture-box'>
-            <section class='teacher-picture'>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTryYYjI-bApvAR3EQ6Ter3WtljMmzi4t4t3p4UoDa9oYp83FikQQ"></img>
-            </section>
-          </section>
-          <section class='teacher-name'>Kevin Durant</section>
-          <section class='teacher-blurb'>
-              Cuddled in a heap with his eyes shut tight,
-              He sleeps through the day.  He sleeps through the night.
-              The cold winds howl and the night sounds growl
-              But the bear snores on.
-          </section>
-        </section>
-      </section> <%# teacher-box %>
+      <%= react_component 'TeacherBox', { teacher: @teacher } %>
 
       <%= react_component 'ProgramsBox', { teacher: @teacher, programs: @programs } %>
 

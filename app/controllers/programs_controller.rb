@@ -17,11 +17,7 @@ class ProgramsController < ApplicationController
 
   def teacher
     @teacher = Teacher.first
-    @programs = Program.take(3)
-    # @programs << Program.first
-    # @programs << Program.last
-    # @programs << Program.find(2)
-    # @programs << Program.find(3)
+    @programs = Program.take(10)
   end
 
 end
