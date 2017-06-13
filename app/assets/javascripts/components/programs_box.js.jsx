@@ -4,6 +4,28 @@ const ProgramsBox = React.createClass({
     return this.props.programs.length
   },
 
+  allProgramsButFirst: function() {
+    var allPrograms = this.props.programs
+    var programsMinusFirst = []
+
+    for (i = 1; i < this.props.programs.length; i++) {
+      programsMinusFirst.push(this.props.programs[i])
+    }
+
+    return programsMinusFirst
+  },
+
+  allProgramsButFirstAndLast: function() {
+    var allPrograms = this.props.programs
+    var programsMinusFirstAndLast = []
+
+    for (i = 1; i < this.props.programs.length-1; i++) {
+      programsMinusFirstAndLast.push(this.props.programs[i])
+    }
+
+    return programsMinusFirstAndLast
+  },
+
   geometricConfiguration: function() {
     switch (this.programLength()) {
       case 1:
@@ -24,6 +46,36 @@ const ProgramsBox = React.createClass({
           </div>
         )
         break
+      case 3:
+        return (
+          <div>
+            <ProgramRectangle program={ this.props.programs[0] }/>
+            <section className='after-top-program-box'>
+              {this.allProgramsButFirst().map(function(program) {
+                return <ProgramSquare
+                         key={program.id}
+                         program={program}/>
+                }
+              )}
+            </section>
+          </div>
+        )
+        break
+      case 4:
+        return (
+          <div>
+            <ProgramRectangle program={ this.props.programs[0] }/>
+            <section className='after-top-program-box'>
+              {this.allProgramsButFirstAndLast().map(function(program) {
+                return <ProgramSquare
+                         key={program.id}
+                         program={program}/>
+                }
+              )}
+            </section>
+            <ProgramRectangle program={ this.props.programs[3] }/>
+          </div>
+        )
     }
   },
 
@@ -37,28 +89,7 @@ const ProgramsBox = React.createClass({
 
         <section className='teacher-programs-squares-box'>
 
-        {this.geometricConfiguration()}
-
-          <section className='after-top-program-box'>
-            <section className='square-program-box-shadow'>
-              <section className='square-program-box'>
-                <a>
-                  <section className='square-program-box-pic'>
-                    <section className='title'>Little Blue Truck
-                    </section>
-                    <section className='bottom'>
-                      <section className='bottom-centered'>
-                        <section className='lock'>
-                          <img src="https://www.simplehabit.com/static/ic_lock_white_24px.svg"></img>
-                        </section>
-                      </section>
-                    </section>
-                  </section>
-                </a>
-              </section>
-            </section>
-
-          </section>
+          {this.geometricConfiguration()}
 
         </section>
 

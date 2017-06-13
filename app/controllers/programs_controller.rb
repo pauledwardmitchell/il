@@ -17,9 +17,11 @@ class ProgramsController < ApplicationController
 
   def teacher
     @teacher = Teacher.first
-    @programs = []
-    @programs << Program.first
-    @programs << Program.last
+    @programs = Program.take(3)
+    # @programs << Program.first
+    # @programs << Program.last
+    # @programs << Program.find(2)
+    # @programs << Program.find(3)
   end
 
 end
