@@ -25,4 +25,10 @@ class ProgramsController < ApplicationController
     @programs = Program.take(4)
   end
 
+  def thewayofalltheearth
+    @teacher = Teacher.first
+    @program = Program.first
+    @tracks = @program.tracks
+  end
+
 end

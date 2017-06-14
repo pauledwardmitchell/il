@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/teacher', to: 'programs#teacher'
 
   get 'michael-jordan-laskey', to: 'programs#michaeljordanlaskey'
+  get 'the-way-of-all-the-earth', to: 'programs#thewayofalltheearth'
 
   resources :tracks, only: [:show]
 

@@ -1,0 +1,111 @@
+
+.program-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.program-background {
+  background-size: cover;
+  height: 100vh;
+  min-height: 100%;
+  position: fixed;
+  z-index: -2;
+  width: 100%;
+  background-image: url(https://www.simplehabit.com/static/images/photo105.jpeg);
+
+  .program-background-film {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+  }
+}
+
+.program-box-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 54px;
+
+  .program-box {
+    width: 640px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-right: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+
+    .program-info-box-container {
+      display: flex;
+      flex-direction: row;
+      margin: 32px 32px 0px;
+
+      .program-info-box {
+        max-width: 560px;
+        min-width: 280px;
+
+        .program-info-box-title {
+          margin-bottom: 16px;
+
+          h1 {
+            font-size: 32px;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            margin-bottom: 8px;
+            letter-spacing: .3;
+            margin: 0;
+            text-align: left;
+            font-family: Avenir-Book,Avenir,Helvetica,Arial,sans-serif;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #fff;
+        }
+
+        .teacher-link {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 16px;
+          align-items: center;
+
+          .teacher-pic {
+            height: 48px;
+            width: 48px;
+            border-radius: 24px;
+            margin-left: 0px;
+            margin-right: 9.6px;
+
+            img {
+              height: 48px;
+              width: 48px;
+              border-radius: 24px;
+            }
+          }
+
+          .by-line {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+          }
+        }
+
+        .program-blurb {
+          margin-bottom: 16px;
+
+          h2 {
+            font-size: 16px;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+}
+
+
