@@ -16,6 +16,19 @@ class ProgramsController < ApplicationController
   end
 
   def teacher
+    @teacher = Teacher.first
+    @programs = Program.take(10)
+  end
+
+  def michaeljordanlaskey
+    @teacher = Teacher.first
+    @programs = Program.take(4)
+  end
+
+  def thewayofalltheearth
+    @teacher = Teacher.first
+    @program = Program.first
+    @tracks = @program.tracks
   end
 
 end
