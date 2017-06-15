@@ -25,6 +25,31 @@ class ProgramsController < ApplicationController
     @programs = Program.take(4)
   end
 
+  def genjordanlaskey
+    @teacher = Teacher.find_by(first_name: 'Gen')
+    @programs = Program.take(4)
+  end
+
+  def collenmayer
+    @teacher = Teacher.find_by(first_name: 'Collen')
+    @programs = Program.take(4)
+  end
+
+  def paulmitchell
+    @teacher = Teacher.find_by(first_name: 'Paul')
+    @programs = Program.take(4)
+  end
+
+  def aimeeshelidemayer
+    @teacher = Teacher.find_by(first_name: 'Aimee')
+    @programs = Program.take(4)
+  end
+
+  def caseystanton
+    @teacher = Teacher.find_by(first_name: 'Casey')
+    @programs = Program.take(4)
+  end
+
   def thewayofalltheearth
     @teacher = Teacher.first
     @program = Program.first

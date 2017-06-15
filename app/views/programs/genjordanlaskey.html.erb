@@ -1,0 +1,15 @@
+<div class='teacher-container'>
+
+  <section class='teacher-padding-box'>
+
+    <section class='teacher-box-container'>
+
+      <%= react_component 'TeacherBox', { teacher: @teacher } %>
+
+      <%= react_component 'ProgramsBox', { teacher: @teacher, programs: @programs } %>
+
+    </section> <%# teacher-box-container %>
+
+  </section> <%# teacher-padding-box %>
+
+</div> <%# teacher-container %>
