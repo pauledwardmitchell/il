@@ -105,6 +105,58 @@
         }
       }
     }
+
+    .adventures-box {
+      margin-top: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      .adventures-box-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding-left: 16px;
+        text-transform: uppercase;
+      }
+
+      .link-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-width: 1px 0px 0px;
+        border-style: solid;
+        border-color: rgb(41, 51, 67);
+        border-image: initial;
+
+        .title-box {
+          display: flex;
+          flex-direction: row;
+          font-family: Avenir-Book,Avenir,Helvetica,Arial,sans-serif;
+
+          .adventure-number {
+            color: rgb(255, 255, 255);
+            margin-right: 16px;
+            font-weight: 500;
+          }
+
+          .adventure-title {
+            font-weight: 500;
+          }
+
+          .adventure-duration {
+            font-weight: 500;
+          }
+        }
+
+      }
+    }
+
   }
 }
 
