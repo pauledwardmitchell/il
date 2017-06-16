@@ -9,6 +9,13 @@ Rails.application.routes.draw do
   get '/teacher', to: 'programs#teacher'
 
   get 'michael-jordan-laskey', to: 'programs#michaeljordanlaskey'
+  get 'gen-jordan-laskey', to: 'programs#genjordanlaskey'
+  get 'collen-mayer', to: 'programs#collenmayer'
+  get 'paul-mitchell', to: 'programs#paulmitchell'
+  get 'aimee-shelide-mayer', to: 'programs#aimeeshelidemayer'
+  get 'casey-stanton', to: 'programs#caseystanton'
+
+
   get 'the-way-of-all-the-earth', to: 'programs#thewayofalltheearth'
 
   resources :tracks, only: [:show]

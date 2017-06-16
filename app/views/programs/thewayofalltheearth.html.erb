@@ -11,16 +11,16 @@
       <section class='program-info-box-container'>
         <section class='program-info-box'>
           <section class='program-info-box-title'>
-            <h1>Find Happiness</h1>
+            <h1><%= @program.title %></h1>
           </section>
           <a href="" class='teacher-link'>
             <section class='teacher-pic'>
-              <img src="https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/5747165561022e030008ce93">
+              <img src=<%= @teacher.pic_link %>>
             </section>
-            <p class='by-line'>by Michael Jordan</p>
+            <p class='by-line'>by <%= @teacher.first_name %> <%= @teacher.last_name %></p>
           </a>
           <section class='program-blurb'>
-            <h2>Horn went BEEP, Engine purred.  Friendliest sounds you've ever heard. Little Blue Truck came down the road.  BEEP said Blue to a big green toad.  Toad said CROAK and winked an eye when Little Blue Truck went rolling by.</h2>
+            <h2><%= @program.explanation %></h2>
           </section>
 
         </section>
@@ -39,6 +39,15 @@
             </section>
           </button>
         </section>
+      </section>
+
+      <section class='adventures-box'>
+        <section class='adventures-box-title'>
+          ADVENTURES
+        </section>
+
+        <%= react_component 'AdventuresList', { adventures: @tracks} %>
+
       </section>
 
     </section>

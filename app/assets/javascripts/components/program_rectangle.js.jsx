@@ -4,7 +4,7 @@ const ProgramRectangle = React.createClass ({
     return (
       <section className='top-program-box-shadow'>
         <section className='top-program-box'>
-          <a href="">
+          <a href="/the-way-of-all-the-earth">
             <section className='top-program-box-pic'>
               <section className='title'>
                 { this.props.program.title }
