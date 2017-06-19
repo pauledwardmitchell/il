@@ -6,7 +6,7 @@ const AdventureLink = React.createClass({
 
   render: function() {
     return (
-      <a>
+      <a href={"/tracks/"+this.props.adventure.id}>
         <section className='link-box'>
           <section className='title-box'>
             <p className='adventure-number'>{this.props.numberOrder}</p>
