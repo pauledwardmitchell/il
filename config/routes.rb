@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: "programs#index"
+  root to: "programs#landing"
 
-  get '/landing', to: 'programs#landing'
   get '/test', to: 'programs#test'
   get '/teachers', to: 'programs#teachers'
   get '/teacher', to: 'programs#teacher'

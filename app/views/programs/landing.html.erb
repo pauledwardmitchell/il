@@ -1,12 +1,4 @@
-<nav class="landing-nav">
-  <ul>
-    <li>First</li>
-    <li>First</li>
-    <li>First</li>
-    <li>First</li>
-  </ul>
-
-</nav>
+<%= render "shared/header" %>
 
 <section class="landing-main">
 
@@ -14,14 +6,13 @@
 
 <section id="promos" class="section-promos">
   <ul>
-    <li id="promo-1"></li>
-    <li id="promo-2"></li>
-    <li id="promo-3"></li>
-    <li id="promo-4"></li>
+    <li id="promo-1"><h2 class='promo-text'>PROGRAMS</h2></li>
+    <li id="promo-2"><h2 class='promo-text'>TEACHERS</h2></li>
+    <li id="promo-3"><h2 class='promo-text'>BLOG</h2></li>
+    <li id="promo-4"><h2 class='promo-text'>PODCAST</h2></li>
   </ul>
 </section>
 
-<footer class="landing-footer">
+<%= react_component 'FooterA' %>
 
-</footer>
 
