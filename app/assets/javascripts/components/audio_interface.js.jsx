@@ -1,6 +1,6 @@
 
 const AudioInterface = React.createClass({
-  
+
 
   render: function() {
 
@@ -9,6 +9,7 @@ const AudioInterface = React.createClass({
 	  	margin: 'auto',
         width: '100%',
         height: '100%',
+        paddingTop: 100,
         // backgroundColor: 'black',
         textAlign: 'center',
         // border: 3,
@@ -21,7 +22,7 @@ const AudioInterface = React.createClass({
 	  	fontFamily: 'avenir-book'
 
 	  },
-	  
+
 	  circleBox: {
         position: 'relative',
         margin: 'auto',
@@ -56,14 +57,13 @@ const AudioInterface = React.createClass({
 	    zIndex: 999
 	  }
 	}
-    
+
   	return (
       <div style={styles.center}>
         <section style={styles.text} >
           <p>{this.props.track.title}</p>
-          <p>sub-title of the track</p>
         </section>
-        
+
         <AudioPlayer style={styles} track={this.props.track} />
 
       </div>
