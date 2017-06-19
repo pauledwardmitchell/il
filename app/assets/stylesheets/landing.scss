@@ -57,6 +57,10 @@
       width: 25%;
       min-height: 200px;
       float: left;
+
+      a {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -79,7 +83,7 @@
   letter-spacing: .3;
   margin: 0;
   text-align: center;
-  padding-top: 25%;
+  padding-top: 72px;
   font-family: Avenir-Book,Avenir,Helvetica,Arial,sans-serif;
 }
 
