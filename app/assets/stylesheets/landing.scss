@@ -57,6 +57,10 @@
       width: 25%;
       min-height: 200px;
       float: left;
+
+      a {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -79,32 +83,20 @@
   letter-spacing: .3;
   margin: 0;
   text-align: center;
-  padding-top: 25%;
+  padding-top: 72px;
   font-family: Avenir-Book,Avenir,Helvetica,Arial,sans-serif;
 }
 
 #promo-2 {
   background-color: #C6CFEC;
-
-  &:hover {
-    opacity: .5;
-  }
 }
 
 #promo-3 {
   background-color: rgb(41, 51, 67);
-
-  &:hover {
-    opacity: .5;
-  }
 }
 
 #promo-4 {
   background-color: #203860;
-
-  &:hover {
-    opacity: .5;
-  }
 }
 
 
