@@ -1,10 +1,49 @@
 const ProgramRectangle = React.createClass ({
 
-  render: function() {
+  programLink: function() {
+    var name = this.props.program.title
+    name = name.toLowerCase()
+    var splitName = name.split(" ")
+    var link = "/"
+
+    for(i = 0; i < splitName.length; i++) {
+      link = link.concat(splitName[i])
+      link = link.concat("-")
+    }
+
+    link = link.slice(0, -1)
+    return link
+  },
+
+  lockedProgram: function() {
     return (
       <section className='top-program-box-shadow'>
         <section className='top-program-box'>
-          <a href="/the-way-of-all-the-earth">
+          <a>
+            <section className='top-program-box-pic'>
+              <section className='title'>
+                { this.props.program.title }
+                <section className='free-button'>Free</section>
+              </section>
+              <section className='bottom'>
+                <section className='bottom-centered'>
+                  <section className='lock'>
+                    <img src="https://www.simplehabit.com/static/ic_lock_white_24px.svg"></img>
+                  </section>
+                </section>
+              </section>
+            </section>
+          </a>
+        </section>
+      </section>
+    )
+  },
+
+  unlockedProgram: function() {
+    return (
+      <section className='top-program-box-shadow'>
+        <section className='top-program-box'>
+          <a href={this.programLink()}>
             <section className='top-program-box-pic'>
               <section className='title'>
                 { this.props.program.title }
@@ -29,6 +68,20 @@ const ProgramRectangle = React.createClass ({
           </a>
         </section>
       </section>
+    )
+  },
+
+  renderLockedOrUnlocked: function() {
+    if (this.props.access === true || this.program.premium === false) {
+      return this.unlockedProgram()
+    } else {
+      return this.lockedProgram()
+    }
+  },
+
+  render: function() {
+    return (
+      this.renderLockedOrUnlocked()
     )
   }
 

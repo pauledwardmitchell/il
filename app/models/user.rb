@@ -4,12 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  private
 
   def access
 
     stripe_subscription_status =
-      Stripe::Customer.retrieve(current_user.stripe_customer_id).subscriptions.data[0].status
+      Stripe::Customer.retrieve(self.stripe_customer_id).subscriptions.data[0].status
 
     if self.access_forever == true
       true

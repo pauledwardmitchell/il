@@ -30,16 +30,19 @@ const ProgramsBox = React.createClass({
     switch (this.programLength()) {
       case 1:
         return (
-          <ProgramRectangle program={ this.props.programs[0] }/>
+          <ProgramRectangle
+            program={this.props.programs[0]}
+            access={this.props.access}/>
         )
         break
       case 2:
         return (
           <div>
-            {this.props.programs.map(function(program) {
+            {this.props.programs.map((program) => {
               return <ProgramRectangle
                        key={program.id}
-                       program={program}/>
+                       program={program}
+                       access={this.props.access}/>
               }
 
             )}
@@ -53,12 +56,15 @@ const ProgramsBox = React.createClass({
       case 11:
         return (
           <div>
-            <ProgramRectangle program={ this.props.programs[0] }/>
+            <ProgramRectangle
+              program={this.props.programs[0]}
+              access={this.props.access}/>
             <section className='after-top-program-box'>
-              {this.allProgramsButFirst().map(function(program) {
+              {this.allProgramsButFirst().map((program) => {
                 return <ProgramSquare
                          key={program.id}
-                         program={program}/>
+                         program={program}
+                         access={this.props.access}/>
                 }
               )}
             </section>
@@ -72,16 +78,21 @@ const ProgramsBox = React.createClass({
       case 12:
         return (
           <div>
-            <ProgramRectangle program={ this.props.programs[0] }/>
+            <ProgramRectangle
+              program={this.props.programs[0]}
+              access={this.props.access}/>
             <section className='after-top-program-box'>
-              {this.allProgramsButFirstAndLast().map(function(program) {
+              {this.allProgramsButFirstAndLast().map((program) => {
                 return <ProgramSquare
                          key={program.id}
-                         program={program}/>
+                         program={program}
+                         access={this.props.access}/>
                 }
               )}
             </section>
-            <ProgramRectangle program={ this.props.programs[3] }/>
+            <ProgramRectangle
+              program={this.props.programs[3]}
+              access={this.props.access}/>
           </div>
         )
     }
