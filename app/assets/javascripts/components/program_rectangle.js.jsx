@@ -1,6 +1,30 @@
 const ProgramRectangle = React.createClass ({
 
-  render: function() {
+  lockedProgram: function() {
+    return (
+      <section className='top-program-box-shadow'>
+        <section className='top-program-box'>
+          <a>
+            <section className='top-program-box-pic'>
+              <section className='title'>
+                { this.props.program.title }
+                <section className='free-button'>Free</section>
+              </section>
+              <section className='bottom'>
+                <section className='bottom-centered'>
+                  <section className='lock'>
+                    <img src="https://www.simplehabit.com/static/ic_lock_white_24px.svg"></img>
+                  </section>
+                </section>
+              </section>
+            </section>
+          </a>
+        </section>
+      </section>
+    )
+  },
+
+  unlockedProgram: function() {
     return (
       <section className='top-program-box-shadow'>
         <section className='top-program-box'>
@@ -29,6 +53,20 @@ const ProgramRectangle = React.createClass ({
           </a>
         </section>
       </section>
+    )
+  },
+
+  renderLockedOrUnlocked: function() {
+    if (this.props.access === true) {
+      return this.unlockedProgram()
+    } else {
+      return this.lockedProgram()
+    }
+  },
+
+  render: function() {
+    return (
+      this.renderLockedOrUnlocked()
     )
   }
 
