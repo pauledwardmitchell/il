@@ -70,7 +70,7 @@ const ProgramSquare = React.createClass({
   },
 
   renderLockedOrUnlocked: function() {
-    if (this.props.access === true) {
+    if (this.props.access === true  || this.program.premium === false) {
       return this.unlockedProgram()
     } else {
       return this.lockedProgram()
