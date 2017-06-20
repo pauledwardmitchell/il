@@ -60,10 +60,11 @@ const ProgramsBox = React.createClass({
               program={this.props.programs[0]}
               access={this.props.access}/>
             <section className='after-top-program-box'>
-              {this.allProgramsButFirst().map(function(program) {
+              {this.allProgramsButFirst().map((program) => {
                 return <ProgramSquare
                          key={program.id}
-                         program={program}/>
+                         program={program}
+                         access={this.props.access}/>
                 }
               )}
             </section>
@@ -81,10 +82,11 @@ const ProgramsBox = React.createClass({
               program={this.props.programs[0]}
               access={this.props.access}/>
             <section className='after-top-program-box'>
-              {this.allProgramsButFirstAndLast().map(function(program) {
+              {this.allProgramsButFirstAndLast().map((program) => {
                 return <ProgramSquare
                          key={program.id}
-                         program={program}/>
+                         program={program}
+                         access={this.props.access}/>
                 }
               )}
             </section>
