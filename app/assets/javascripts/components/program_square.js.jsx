@@ -1,6 +1,6 @@
 const ProgramSquare = React.createClass({
 
-  render: function() {
+  lockedProgram: function() {
     return (
       <section className='square-program-box-shadow'>
         <section className='square-program-box'>
@@ -20,6 +20,51 @@ const ProgramSquare = React.createClass({
           </a>
         </section>
       </section>
+    )
+  },
+
+  unlockedProgram: function() {
+    return (
+            <section className='square-program-box-shadow'>
+        <section className='square-program-box'>
+          <a>
+            <section className='square-program-box-pic'>
+              <section className='title'>
+                { this.props.program.title }
+              </section>
+              <section className='bottom'>
+                <section className='bottom-centered'>
+                  <section>
+                    <section className="play-btn">
+                      <img src="/assets/play-arrow-2x.png"></img>
+                    </section>
+                  </section>
+                  <section>
+                    <section>
+                      <p>7 Sessions</p>
+                      <p>5 min</p>
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </section>
+          </a>
+        </section>
+      </section>
+    )
+  },
+
+  renderLockedOrUnlocked: function() {
+    if (this.props.access === true) {
+      return this.unlockedProgram()
+    } else {
+      return this.lockedProgram()
+    }
+  },
+
+  render: function() {
+    return (
+      this.renderLockedOrUnlocked()
     )
   }
 
