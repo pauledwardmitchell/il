@@ -1,5 +1,20 @@
 const ProgramRectangle = React.createClass ({
 
+  programLink: function() {
+    var name = this.props.program.title
+    name = name.toLowerCase()
+    var splitName = name.split(" ")
+    var link = "/"
+
+    for(i = 0; i < splitName.length; i++) {
+      link = link.concat(splitName[i])
+      link = link.concat("-")
+    }
+
+    link = link.slice(0, -1)
+    return link
+  },
+
   lockedProgram: function() {
     return (
       <section className='top-program-box-shadow'>
@@ -28,7 +43,7 @@ const ProgramRectangle = React.createClass ({
     return (
       <section className='top-program-box-shadow'>
         <section className='top-program-box'>
-          <a href="/the-way-of-all-the-earth">
+          <a href={this.programLink()}>
             <section className='top-program-box-pic'>
               <section className='title'>
                 { this.props.program.title }

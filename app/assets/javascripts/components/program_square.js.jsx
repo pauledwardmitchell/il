@@ -1,5 +1,20 @@
 const ProgramSquare = React.createClass({
 
+  programLink: function() {
+    var name = this.props.program.title
+    name = name.toLowerCase()
+    var splitName = name.split(" ")
+    var link = "/"
+
+    for(i = 0; i < splitName.length; i++) {
+      link = link.concat(splitName[i])
+      link = link.concat("-")
+    }
+
+    link = link.slice(0, -1)
+    return link
+  },
+
   lockedProgram: function() {
     return (
       <section className='square-program-box-shadow'>
@@ -25,9 +40,9 @@ const ProgramSquare = React.createClass({
 
   unlockedProgram: function() {
     return (
-            <section className='square-program-box-shadow'>
+      <section className='square-program-box-shadow'>
         <section className='square-program-box'>
-          <a>
+          <a href={this.programLink()}>
             <section className='square-program-box-pic'>
               <section className='title'>
                 { this.props.program.title }
