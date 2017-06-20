@@ -21,6 +21,7 @@ class ProgramsController < ApplicationController
   end
 
   def michaeljordanlaskey
+    @access = current_user.access
     @teacher = Teacher.first
     @programs = Program.take(4)
   end
