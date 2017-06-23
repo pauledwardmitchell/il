@@ -48,12 +48,18 @@ class ProgramsController < ApplicationController
 
   def caseystanton
     @teacher = Teacher.find_by(first_name: 'Casey')
-    @programs = Program.take(4)
+    @programs = @teacher.programs
   end
 
   def thewayofalltheearth
     @teacher = Teacher.first
     @program = Program.first
+    @tracks = @program.tracks
+  end
+
+  def toblessthespacebetweenus
+    @teacher = Teacher.find_by(first_name: 'Casey')
+    @program = Program.find_by(title: 'To Bless The Space Between Us')
     @tracks = @program.tracks
   end
 

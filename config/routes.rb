@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "programs#landing"
 
-  get '/test', to: 'programs#test'
+  # get '/test', to: 'programs#test'
   get '/teachers', to: 'programs#teachers'
-  get '/teacher', to: 'programs#teacher'
+  # get '/teacher', to: 'programs#teacher'
 
   get 'michael-jordan-laskey', to: 'programs#michaeljordanlaskey'
   get 'gen-jordan-laskey', to: 'programs#genjordanlaskey'
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
 
   get 'the-way-of-all-the-earth', to: 'programs#thewayofalltheearth'
+  get 'to-bless-the-space-between-us', to: 'programs#toblessthespacebetweenus'
 
   resources :tracks, only: [:show]
 
