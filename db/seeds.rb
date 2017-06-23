@@ -19,6 +19,10 @@
 # Program.create(title: 'Spiritual Poverty', subtitle: 'This program is based on a spiritual classic.', explanation: 'Pop-up typewriter meggings, vaporware cardigan marfa health goth selvage neutra green juice. Kinfolk edison bulb shoreditch, leggings helvetica crucifix semiotics gluten-free vape artisan mustache fanny pack whatever.')
 # Program.create(title: 'Second Naivete', subtitle: 'This program is based on a spiritual classic.', explanation: 'Pop-up typewriter meggings, vaporware cardigan marfa health goth selvage neutra green juice. Kinfolk edison bulb shoreditch, leggings helvetica crucifix semiotics gluten-free vape artisan mustache fanny pack whatever.')
 
+# Program.create(title: 'To Bless The Space Between Us', subtitle: 'This program is based on sweet poems by John ODonohue', explanation: 'Pop-up typewriter meggings, vaporware cardigan marfa health goth selvage neutra green juice. Kinfolk edison bulb shoreditch, leggings helvetica crucifix semiotics gluten-free vape artisan mustache fanny pack whatever.', premium: false, teacher_id: Teacher.find_by(first_name: 'Casey').id)
+# Track.create(title: 'For Longing', duration: [9, 10, 11].sample, link: 'https://s3-us-west-2.amazonaws.com/innerlfie/Casey/ReadingPoems/For+Longing_john+Odonohue.m4a', program_id: Program.last.id)
+
+
 # Program.all.each do |program|
 #   Track.create(title: program.title+' 1', duration: [9, 10, 11].sample, link: '/1812.m4a', program_id: program.id)
 #   Track.create(title: program.title+' 2', duration: [9, 10, 11].sample, link: '/1812.m4a', program_id: program.id)

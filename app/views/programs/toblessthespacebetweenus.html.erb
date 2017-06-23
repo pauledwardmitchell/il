@@ -1,0 +1,58 @@
+<div class='program-container'>
+
+  <%= render "shared/header" %>
+
+  <section class='program-background'>
+    <section class='program-background-film'>
+    </section>
+  </section>
+
+  <section class='program-box-container'>
+    <section class='program-box'>
+
+      <section class='program-info-box-container'>
+        <section class='program-info-box'>
+          <section class='program-info-box-title'>
+            <h1><%= @program.title %></h1>
+          </section>
+          <a href="" class='teacher-link'>
+            <section class='teacher-pic'>
+              <img src=<%= @teacher.pic_link %>>
+            </section>
+            <p class='by-line'>by <%= @teacher.first_name %> <%= @teacher.last_name %></p>
+          </a>
+          <section class='program-blurb'>
+            <h2><%= @program.explanation %></h2>
+          </section>
+
+        </section>
+      </section>
+
+      <section style="width: 100%; border-bottom: 1px solid rgb(55, 63, 78); margin-bottom: 48px;">
+        <section style="transform: translateY(50%); max-width: 220px; margin: 0px auto;">
+          <button style="display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 100; font-family: &quot;Avenir Book&quot;, Avenir, Helvetica, Arial, sans-serif; border-width: 0px; border-radius: 2px; padding: 8px; width: 100%; cursor: pointer; background-color: rgb(63, 192, 199); color: rgb(255, 255, 255);">
+            <section style="width: 100%;">
+              <section style="margin: 0px auto;">
+                <section style="display: flex; align-items: center; justify-content: center;">
+                  <img src="/assets/play-arrow-2x.png" style="width: 24px; height: 24px; margin-left: -2px;">
+                  <section style="font-size: 14px; font-weight: 200;">Begin</section>
+                </section>
+              </section>
+            </section>
+          </button>
+        </section>
+      </section>
+
+      <section class='adventures-box'>
+        <section class='adventures-box-title'>
+          Sessions
+        </section>
+
+        <%= react_component 'AdventuresList', { adventures: @tracks} %>
+
+      </section>
+
+    </section>
+  </section>
+
+</div>
