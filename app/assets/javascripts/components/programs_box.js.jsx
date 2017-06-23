@@ -1,26 +1,26 @@
 const ProgramsBox = React.createClass({
 
   programLength: function() {
-    return this.props.programs.length
+    return this.props.programs_hashes.length
   },
 
   allProgramsButFirst: function() {
-    var allPrograms = this.props.programs
+    var allPrograms = this.props.programs_hashes
     var programsMinusFirst = []
 
-    for (i = 1; i < this.props.programs.length; i++) {
-      programsMinusFirst.push(this.props.programs[i])
+    for (i = 1; i < this.props.programs_hashes.length; i++) {
+      programsMinusFirst.push(this.props.programs_hashes[i])
     }
 
     return programsMinusFirst
   },
 
   allProgramsButFirstAndLast: function() {
-    var allPrograms = this.props.programs
+    var allPrograms = this.props.programs_hashes
     var programsMinusFirstAndLast = []
 
-    for (i = 1; i < this.props.programs.length-1; i++) {
-      programsMinusFirstAndLast.push(this.props.programs[i])
+    for (i = 1; i < this.props.programs_hashes.length-1; i++) {
+      programsMinusFirstAndLast.push(this.props.programs_hashes[i])
     }
 
     return programsMinusFirstAndLast
@@ -31,14 +31,14 @@ const ProgramsBox = React.createClass({
       case 1:
         return (
           <ProgramRectangle
-            program={this.props.programs[0]}
+            program={this.props.programs_hashes[0]}
             access={this.props.access}/>
         )
         break
       case 2:
         return (
           <div>
-            {this.props.programs.map((program) => {
+            {this.props.programs_hashes.map((program) => {
               return <ProgramRectangle
                        key={program.id}
                        program={program}
@@ -57,7 +57,7 @@ const ProgramsBox = React.createClass({
         return (
           <div>
             <ProgramRectangle
-              program={this.props.programs[0]}
+              program={this.props.programs_hashes[0]}
               access={this.props.access}/>
             <section className='after-top-program-box'>
               {this.allProgramsButFirst().map((program) => {
@@ -79,7 +79,7 @@ const ProgramsBox = React.createClass({
         return (
           <div>
             <ProgramRectangle
-              program={this.props.programs[0]}
+              program={this.props.programs_hashes[0]}
               access={this.props.access}/>
             <section className='after-top-program-box'>
               {this.allProgramsButFirstAndLast().map((program) => {
@@ -91,7 +91,7 @@ const ProgramsBox = React.createClass({
               )}
             </section>
             <ProgramRectangle
-              program={this.props.programs[3]}
+              program={this.props.programs_hashes[this.props.programs_hashes.length-1]}
               access={this.props.access}/>
           </div>
         )

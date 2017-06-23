@@ -24,31 +24,102 @@ class ProgramsController < ApplicationController
     @access = current_user.access
     @teacher = Teacher.first
     @programs = Program.take(4)
+    @programs_hashes = []
+
+    @programs.each do |program|
+      @program_hash = {
+        title: program.title,
+        num_program_tracks: program.tracks.count,
+        premium: program.premium,
+        id: program.id
+      }
+      @programs_hashes << @program_hash
+    end
   end
 
   def genjordanlaskey
+    @access = current_user.access
     @teacher = Teacher.find_by(first_name: 'Gen')
     @programs = Program.take(4)
+    @programs_hashes = []
+
+    @programs.each do |program|
+      @program_hash = {
+        title: program.title,
+        num_program_tracks: program.tracks.count,
+        premium: program.premium,
+        id: program.id
+      }
+      @programs_hashes << @program_hash
+    end
   end
 
   def collenmayer
+    @access = current_user.access
     @teacher = Teacher.find_by(first_name: 'Collen')
     @programs = Program.take(4)
+    @programs_hashes = []
+
+    @programs.each do |program|
+      @program_hash = {
+        title: program.title,
+        num_program_tracks: program.tracks.count,
+        premium: program.premium,
+        id: program.id
+      }
+      @programs_hashes << @program_hash
+    end
   end
 
   def paulmitchell
+    @access = current_user.access
     @teacher = Teacher.find_by(first_name: 'Paul')
     @programs = Program.take(4)
+    @programs_hashes = []
+
+    @programs.each do |program|
+      @program_hash = {
+        title: program.title,
+        num_program_tracks: program.tracks.count,
+        premium: program.premium,
+        id: program.id
+      }
+      @programs_hashes << @program_hash
+    end
   end
 
   def aimeeshelidemayer
+    @access = current_user.access
     @teacher = Teacher.find_by(first_name: 'Aimee')
     @programs = Program.take(4)
+    @programs_hashes = []
+
+    @programs.each do |program|
+      @program_hash = {
+        title: program.title,
+        num_program_tracks: program.tracks.count,
+        premium: program.premium,
+        id: program.id
+      }
+      @programs_hashes << @program_hash
+    end
   end
 
   def caseystanton
+    @access = current_user.access
     @teacher = Teacher.find_by(first_name: 'Casey')
     @programs = @teacher.programs
+    @programs_hashes = []
+
+    @programs.each do |program|
+      @program_hash = {
+        title: program.title,
+        num_program_tracks: program.tracks.count,
+        premium: program.premium,
+        id: program.id
+      }
+      @programs_hashes << @program_hash
+    end
   end
 
   def thewayofalltheearth

@@ -15,6 +15,14 @@ const ProgramSquare = React.createClass({
     return link
   },
 
+  singularOrPluralSessions: function() {
+    if (this.props.program.num_program_tracks === 1) {
+      return "Session"
+    } else {
+      return "Sessions"
+    }
+  },
+
   lockedProgram: function() {
     return (
       <section className='square-program-box-shadow'>
@@ -56,8 +64,7 @@ const ProgramSquare = React.createClass({
                   </section>
                   <section>
                     <section>
-                      <p>7 Sessions</p>
-                      <p>5 min</p>
+                      <p>{this.props.program.num_program_tracks} {this.singularOrPluralSessions()}</p>
                     </section>
                   </section>
                 </section>

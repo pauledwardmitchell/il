@@ -1,7 +1,7 @@
 const AdventureLink = React.createClass({
 
   formattedDuration: function() {
-    return this.props.adventure.duration + ":00"
+    return this.props.adventure.duration + " mins"
   },
 
   render: function() {

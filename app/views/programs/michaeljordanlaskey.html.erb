@@ -8,7 +8,7 @@
 
       <%= react_component 'TeacherBox', { teacher: @teacher } %>
 
-      <%= react_component 'ProgramsBox', { teacher: @teacher, programs: @programs, access: @access } %>
+      <%= react_component 'ProgramsBox', { access: @access, teacher: @teacher, programs_hashes: @programs_hashes } %>
 
     </section> <%# teacher-box-container %>
 
