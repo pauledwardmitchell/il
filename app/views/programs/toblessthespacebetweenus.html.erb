@@ -10,23 +10,7 @@
   <section class='program-box-container'>
     <section class='program-box'>
 
-      <section class='program-info-box-container'>
-        <section class='program-info-box'>
-          <section class='program-info-box-title'>
-            <h1><%= @program.title %></h1>
-          </section>
-          <a href="" class='teacher-link'>
-            <section class='teacher-pic'>
-              <img src=<%= @teacher.pic_link %>>
-            </section>
-            <p class='by-line'>by <%= @teacher.first_name %> <%= @teacher.last_name %></p>
-          </a>
-          <section class='program-blurb'>
-            <h2><%= @program.explanation %></h2>
-          </section>
-
-        </section>
-      </section>
+      <%= react_component 'ProgramInfoBox', { program: @program, teacher: @teacher} %>
 
       <section style="width: 100%; border-bottom: 1px solid rgb(55, 63, 78); margin-bottom: 48px;">
         <section style="transform: translateY(50%); max-width: 220px; margin: 0px auto;">
