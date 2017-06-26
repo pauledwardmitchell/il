@@ -22,6 +22,9 @@
 # Program.create(title: 'To Bless The Space Between Us', subtitle: 'This program is based on sweet poems by John ODonohue', explanation: 'Pop-up typewriter meggings, vaporware cardigan marfa health goth selvage neutra green juice. Kinfolk edison bulb shoreditch, leggings helvetica crucifix semiotics gluten-free vape artisan mustache fanny pack whatever.', premium: false, teacher_id: Teacher.find_by(first_name: 'Casey').id)
 # Track.create(title: 'For Longing', duration: [9, 10, 11].sample, link: 'https://s3-us-west-2.amazonaws.com/innerlfie/Casey/ReadingPoems/For+Longing_john+Odonohue.m4a', program_id: Program.last.id)
 
+# Track.create(title: 'For Presence', duration: "1", link: 'https://s3-us-west-2.amazonaws.com/innerlfie/Casey/ReadingPoems/For+Presence+_+John+O+Don.m4a', program_id: Program.last.id)
+# Track.create(title: 'For Friendship', duration: "1", link: 'https://s3-us-west-2.amazonaws.com/innerlfie/Casey/ReadingPoems/For+Friendship_john+O+Don.m4a', program_id: Program.last.id)
+
 
 # Program.all.each do |program|
 #   Track.create(title: program.title+' 1', duration: [9, 10, 11].sample, link: '/1812.m4a', program_id: program.id)
@@ -37,7 +40,7 @@
 #   Track.create(title: program.title+' 11', duration: [9, 10, 11].sample, link: '/1812.m4a', program_id: program.id)
 # end
 
-Teacher.create(first_name: 'Paul',
-               last_name: 'Mitchell',
-               pic_link: 'https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/5745cf09c2c78a0300cfb1a4',
-               blurb: 'In a cave in the woods, in his deep dark lair, through the long cold winter, sleeps a great brown bear')
+# Teacher.create(first_name: 'Paul',
+#                last_name: 'Mitchell',
+#                pic_link: 'https://bucketeer-760d0a32-a78c-4335-9090-9206d2933331.s3.amazonaws.com/5745cf09c2c78a0300cfb1a4',
+#                blurb: 'In a cave in the woods, in his deep dark lair, through the long cold winter, sleeps a great brown bear')
