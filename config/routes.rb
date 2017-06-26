@@ -28,4 +28,7 @@ Rails.application.routes.draw do
   post 'yearly_subscription', to: 'charges#yearly_subscription_create'
   post 'forever_subscription', to: 'charges#forever_subscription_create'
 
+  #development:
+  get 'logout_link', to: 'programs#logout_link'
+
 end
