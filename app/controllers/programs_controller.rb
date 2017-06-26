@@ -10,6 +10,9 @@ class ProgramsController < ApplicationController
   def test
   end
 
+  def logout_link
+  end
+
   def landing
   end
 
