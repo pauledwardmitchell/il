@@ -13,6 +13,11 @@ class ProgramsController < ApplicationController
   def logout_link
   end
 
+  def list
+    @programs = Program.take(6)
+    @access = current_user.access
+  end
+
   def landing
   end
 
