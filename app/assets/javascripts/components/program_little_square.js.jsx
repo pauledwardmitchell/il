@@ -1,5 +1,13 @@
 const ProgramLittleSquare = React.createClass({
 
+  getInitialState: function() {
+    return { hover: false }
+  },
+
+  toggleHover: function() {
+    this.setState( {hover: !this.state.hover} )
+  },
+
   programLink: function() {
     var name = this.props.program.title
     name = name.toLowerCase()
@@ -16,6 +24,21 @@ const ProgramLittleSquare = React.createClass({
   },
 
   render: function() {
+
+    var linkStyle;
+    if (this.state.hover) {
+      linkStyle = { display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: 1
+                  }
+    } else {
+      linkStyle = { display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: .5
+                  }
+    }
 
     const styles = {
       outerBox: {
@@ -57,6 +80,27 @@ const ProgramLittleSquare = React.createClass({
         letterSpacing: 0.8,
         color: 'rgb(255, 255, 255)',
         // background: linearGradient('rgba(0, 0, 0, 0.75)', 'rgba(0, 0, 0, 0)');
+      },
+
+      bottom: {
+        width: 'auto',
+        color: 'rgb(255, 255, 255)',
+        // background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+      },
+
+      innerBottom: {
+        padding: 16,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between'
+      },
+
+      playBtn: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        opacity: .5
       }
     }
 
@@ -67,6 +111,13 @@ const ProgramLittleSquare = React.createClass({
             <section style={styles.link}>
               <section style={styles.title}>
                 {this.props.program.title}
+              </section>
+              <section style={styles.bottom}>
+                <section style={styles.innerBottom}>
+                  <section style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+                      <img src="/assets/play-arrow-2x.png"></img>
+                  </section>
+                </section>
               </section>
             </section>
           </a>
