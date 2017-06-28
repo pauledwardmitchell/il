@@ -23,22 +23,62 @@ const ProgramLittleSquare = React.createClass({
     return link
   },
 
-  render: function() {
+  unlockedProgram: function() {
+
+    var innerBottom = {
+        padding: 16,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between'
+      }
+
+    var titleStyle = {
+    fontSize: 14,
+    fontWeight: 300,
+    paddingBottom: 10,
+    textAlign: 'right'}
 
     var linkStyle;
     if (this.state.hover) {
       linkStyle = { display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    opacity: 1
-                  }
+                    opacity: 1 }
     } else {
       linkStyle = { display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    opacity: .5
-                  }
+                    opacity: .5 }
     }
+
+    return(
+      <section style={innerBottom}>
+        <section style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+          <img src="/assets/play-arrow-2x.png"></img>
+        </section>
+        <section>
+          <p style={titleStyle}>
+            7 Sessions
+          </p>
+        </section>
+      </section>
+    )
+  },
+
+  lockedProgram: function() {
+
+  },
+
+  renderLockedOrUnlocked: function() {
+    if (this.props.access === true || this.props.program.premium === false) {
+      return this.unlockedProgram()
+    } else {
+      return this.lockedProgram()
+    }
+  },
+
+  render: function() {
 
     const styles = {
       outerBox: {
@@ -113,11 +153,7 @@ const ProgramLittleSquare = React.createClass({
                 {this.props.program.title}
               </section>
               <section style={styles.bottom}>
-                <section style={styles.innerBottom}>
-                  <section style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-                      <img src="/assets/play-arrow-2x.png"></img>
-                  </section>
-                </section>
+                {this.renderLockedOrUnlocked()}
               </section>
             </section>
           </a>
