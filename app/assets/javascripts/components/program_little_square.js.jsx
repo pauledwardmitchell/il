@@ -1,5 +1,20 @@
 const ProgramLittleSquare = React.createClass({
 
+  programLink: function() {
+    var name = this.props.program.title
+    name = name.toLowerCase()
+    var splitName = name.split(" ")
+    var link = "/"
+
+    for(i = 0; i < splitName.length; i++) {
+      link = link.concat(splitName[i])
+      link = link.concat("-")
+    }
+
+    link = link.slice(0, -1)
+    return link
+  },
+
   render: function() {
 
     const styles = {
@@ -48,7 +63,7 @@ const ProgramLittleSquare = React.createClass({
     return (
       <section style={styles.outerBox}>
         <section style={styles.innerBox}>
-          <a>
+          <a href={this.programLink()}>
             <section style={styles.link}>
               <section style={styles.title}>
                 {this.props.program.title}

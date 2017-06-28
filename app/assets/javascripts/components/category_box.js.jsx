@@ -35,7 +35,7 @@ const CategoryBox = React.createClass({
     return(
       <section style={styles.outerBox}>
 
-        <section style={styles.title}>Recommended Meditations</section>
+        <section style={styles.title}>{this.props.title}</section>
 
         <section style={styles.alignment}>
 
