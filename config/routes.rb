@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "programs#landing"
 
   # get '/test', to: 'programs#test'
+  get 'list', to: 'programs#list'
   get '/teachers', to: 'programs#teachers'
   # get '/teacher', to: 'programs#teacher'
 

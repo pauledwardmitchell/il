@@ -13,6 +13,9 @@ class ProgramsController < ApplicationController
   def logout_link
   end
 
+  def list
+  end
+
   def landing
   end
 
