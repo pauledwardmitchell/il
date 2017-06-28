@@ -14,6 +14,8 @@ class ProgramsController < ApplicationController
   end
 
   def list
+    @programs = Program.take(6)
+    @access = current_user.access
   end
 
   def landing

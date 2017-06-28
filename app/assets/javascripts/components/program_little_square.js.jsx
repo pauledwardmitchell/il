@@ -29,6 +29,19 @@ const ProgramLittleSquare = React.createClass({
         flexDirection: 'column',
         justifyContent: 'space-between',
         overflow: 'hidden'
+      },
+
+      title: {
+        width: 'auto',
+        paddingTop: 16,
+        paddingLeft: 16,
+        paddingRight: 16,
+        paddingBottom: 64,
+        fontSize: 20,
+        fontWeight: 300,
+        letterSpacing: 0.8,
+        color: 'rgb(255, 255, 255)',
+        // background: linearGradient('rgba(0, 0, 0, 0.75)', 'rgba(0, 0, 0, 0)');
       }
     }
 
@@ -37,6 +50,9 @@ const ProgramLittleSquare = React.createClass({
         <section style={styles.innerBox}>
           <a>
             <section style={styles.link}>
+              <section style={styles.title}>
+                {this.props.program.title}
+              </section>
             </section>
           </a>
         </section>

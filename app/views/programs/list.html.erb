@@ -8,19 +8,9 @@
 
         <section style='position: relative;'>
 
-          <section style='border: 1px solid rgb(41, 51, 67); border-radius: 5px; background-color: rgba(41, 51, 67, 0.3); max-width: 720px; width: 100%; align-items: center; padding: 32px; box-sizing: border-box; margin-top: 16px;'><%# this will be another react component %>
+          <%= react_component 'CategoryBox', { programs: @programs, access: @access} %>
 
-            <section style='font-size: 20px; font-weight: 300; margin-bottom: 16px; color: white;'>Recommended Meditations</section>
-
-            <section style='display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;'>
-
-              <%= react_component 'ProgramLittleSquare' %>
-              <%= react_component 'ProgramLittleSquare' %>
-              <%= react_component 'ProgramLittleSquare' %>
-
-            </section>
-
-          </section>
+          <%= react_component 'CategoryBox', { programs: @programs, access: @access} %>
 
         </section>
 
