@@ -26,18 +26,19 @@ const ProgramLittleSquare = React.createClass({
   unlockedProgram: function() {
 
     var innerBottom = {
-        padding: 16,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'flex-end',
-        justifyContent: 'space-between'
-      }
+          padding: 16,
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'flex-end',
+          justifyContent: 'space-between'
+        }
 
     var titleStyle = {
-    fontSize: 14,
-    fontWeight: 300,
-    paddingBottom: 10,
-    textAlign: 'right'}
+          fontSize: 14,
+          fontWeight: 300,
+          paddingBottom: 10,
+          textAlign: 'right'
+        }
 
     var linkStyle;
     if (this.state.hover) {
@@ -68,18 +69,18 @@ const ProgramLittleSquare = React.createClass({
 
   lockedProgram: function() {
     var innerBottom = {
-      padding: 16,
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'flex-end',
-      justifyContent: 'space-between'
-    }
+          padding: 16,
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'flex-end',
+          justifyContent: 'space-between'
+        }
 
     var linkStyle = {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }
 
     var lockStyle;
       if (this.state.hover) {
