@@ -67,7 +67,38 @@ const ProgramLittleSquare = React.createClass({
   },
 
   lockedProgram: function() {
+    var innerBottom = {
+      padding: 16,
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-end',
+      justifyContent: 'space-between'
+    }
 
+    var linkStyle = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }
+
+    var lockStyle;
+      if (this.state.hover) {
+        lockStyle = { height: 48,
+                      width: 48,
+                      opacity: 1 }
+      } else {
+        lockStyle = { height: 48,
+                      width: 48,
+                      opacity: .5 }
+      }
+
+  return (
+    <section style={innerBottom}>
+      <section style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+        <img style={lockStyle} src="https://www.simplehabit.com/static/ic_lock_white_24px.svg"></img>
+       </section>
+     </section>
+  )
   },
 
   renderLockedOrUnlocked: function() {
