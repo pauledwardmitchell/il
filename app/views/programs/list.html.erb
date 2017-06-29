@@ -1,5 +1,7 @@
 <div class='program-container'>
 
+  <%= render "shared/header" %>
+
   <section class='list-background'>
 
     <section style='min-height: 100%;'>
@@ -8,9 +10,9 @@
 
         <section style='position: relative;'>
 
-          <%= react_component 'CategoryBox', { programs: @programs, access: @access} %>
+          <%= react_component 'CategoryBox', { programs: @programs, access: @access, title: 'Recommended For You'} %>
 
-          <%= react_component 'CategoryBox', { programs: @programs, access: @access} %>
+          <%= react_component 'CategoryBox', { programs: @programs, access: @access, title: 'Sacramental Preparation'} %>
 
         </section>
 
