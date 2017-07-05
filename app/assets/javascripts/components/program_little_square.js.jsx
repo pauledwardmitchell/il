@@ -8,6 +8,10 @@ const ProgramLittleSquare = React.createClass({
     this.setState( {hover: !this.state.hover} )
   },
 
+  picLink: function() {
+    return "url("+this.props.program.pic_link+")"
+  },
+
   programLink: function() {
     var name = this.props.program.title
     name = name.toLowerCase()
@@ -128,7 +132,7 @@ const ProgramLittleSquare = React.createClass({
 
       link: {
         backgroundColor: 'rgb(34, 34, 34)',
-        backgroundImage: `url('https://s3-us-west-2.amazonaws.com/innerlfie/Photos/cez2.jpeg')`,
+        backgroundImage: this.picLink(),
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         position: 'relative',
