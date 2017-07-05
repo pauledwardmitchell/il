@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # get '/test', to: 'programs#test'
   get 'list', to: 'programs#list'
   get '/teachers', to: 'programs#teachers'
+  get '/profile', to: 'programs#profile'
   # get '/teacher', to: 'programs#teacher'
 
   get 'michael-jordan-laskey', to: 'programs#michaeljordanlaskey'
