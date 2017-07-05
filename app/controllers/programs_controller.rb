@@ -14,7 +14,7 @@ class ProgramsController < ApplicationController
   end
 
   def list
-    @programs = Program.take(6)
+    @programs = Program.take(12)
     @access = current_user.access
   end
 
@@ -41,6 +41,7 @@ class ProgramsController < ApplicationController
         title: program.title,
         num_program_tracks: program.tracks.count,
         premium: program.premium,
+        pic_link: program.pic_link,
         id: program.id
       }
       @programs_hashes << @program_hash
@@ -126,6 +127,7 @@ class ProgramsController < ApplicationController
         title: program.title,
         num_program_tracks: program.tracks.count,
         premium: program.premium,
+        pic_link: program.pic_link,
         id: program.id
       }
       @programs_hashes << @program_hash

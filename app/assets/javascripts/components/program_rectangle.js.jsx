@@ -1,5 +1,9 @@
 const ProgramRectangle = React.createClass ({
 
+  picLink: function() {
+    return "url("+this.props.program.pic_link+")"
+  },
+
   programLink: function() {
     var name = this.props.program.title
     name = name.toLowerCase()
@@ -24,11 +28,14 @@ const ProgramRectangle = React.createClass ({
   },
 
   lockedProgram: function() {
+    var picLink = {
+      backgroundImage: this.picLink()
+    }
     return (
       <section className='top-program-box-shadow'>
         <section className='top-program-box'>
           <a>
-            <section className='top-program-box-pic'>
+            <section className='top-program-box-pic' style={picLink}>
               <section className='title'>
                 { this.props.program.title }
                 <section className='free-button'>Free</section>
@@ -48,11 +55,14 @@ const ProgramRectangle = React.createClass ({
   },
 
   unlockedProgram: function() {
+    var picLink = {
+      backgroundImage: this.picLink()
+    }
     return (
       <section className='top-program-box-shadow'>
         <section className='top-program-box'>
           <a href={this.programLink()}>
-            <section className='top-program-box-pic'>
+            <section className='top-program-box-pic' style={picLink}>
               <section className='title'>
                 { this.props.program.title }
                 <section className='free-button'>Free</section>
