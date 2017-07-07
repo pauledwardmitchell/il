@@ -18,7 +18,7 @@
               <section style="position: relative; overflow: hidden; width: 200px; height: 200px; padding: 0px; margin: 0px 8px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border-radius: 5px; box-sizing: border-box; cursor: pointer; background-color: rgb(52, 169, 180);">
                 <section style="padding: 24px 16px 16px;">
                   <section style="font-size: 18px; font-weight: 300; text-align: center; text-transform: none;">Monthly</section>
-                  <section style="font-size: 43px; font-weight: 500;">$11.99</section>
+                  <section style="font-size: 43px; font-weight: 500;">$9.99</section>
                   <section style="font-size: 16px; font-weight: 300; font-style: oblique; text-transform: none;">per month</section>
                 </section>
 
@@ -34,7 +34,7 @@
                   <script>
                     document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
                   </script>
-                  <button type="submit" style="background-color: rgb(255, 139, 139); font-size: 18px; font-weight: 300; text-transform: none; border: none; font-family: Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;">Subscribe</button>
+                  <button type="submit" style="width: 100%; background-color: rgb(255, 139, 139); font-size: 18px; font-weight: 300; text-transform: none; border: none; font-family: Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;">Subscribe</button>
                 <% end %>
 
               </section>
@@ -45,9 +45,25 @@
                 <section style="padding: 24px 16px 16px;">
                   <section style="font-size: 18px; font-weight: 300; text-align: center; text-transform: none;">Yearly</section>
                   <section style="font-size: 43px; font-weight: 500;">$8.39</section>
-                  <section style="font-size: 16px; font-weight: 300; font-style: oblique; text-transform: none;">per month</section>
+                  <section style="font-size: 16px; font-weight: 300; font-style: oblique; text-transform: none;">per month
+                  </section>
                 </section>
-                <section style="width: 100%; padding: 16px; align-self: flex-end; border-radius: 0px 0px 5px 5px; background-color: rgb(255, 139, 139); box-sizing: border-box; font-size: 18px; font-weight: 300; text-transform: none;">Subscribe</section>
+
+                <%= form_tag(yearly_subscription_path, {:class => 'subscribe-button'})  do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                          data-description="A year's subscription"
+                          data-amount="7999"
+                          data-image="https://static1.squarespace.com/static/54a21923e4b0be677c12a827/t/54eb76f9e4b0e3df8c199467/1493842069831/?format=1500w"
+                          data-locale="auto"
+                          data-email="<%=current_user.email%>">
+                  </script>
+                  <script>
+                    document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
+                  </script>
+                  <button type="submit" style="background-color: rgb(255, 139, 139); font-size: 18px; font-weight: 300; text-transform: none; border: none; font-family: Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;">Subscribe</button>
+                <% end %>
+
               </section>
             </section>
             <section style="font-size: 16px; text-align: center; margin: 0px; padding: 0px;">
@@ -56,8 +72,11 @@
                   <section style="font-size: 18px; font-weight: 300; text-align: center; text-transform: none;">Lifetime</section>
                   <section style="font-size: 43px; font-weight: 500;">$299</section>
                   <section style="font-size: 16px; font-weight: 300; font-style: oblique; text-transform: none;">pay just once!</section>
+
                 </section>
-                <section style="width: 100%; padding: 16px; align-self: flex-end; border-radius: 0px 0px 5px 5px; background-color: rgb(255, 139, 139); box-sizing: border-box; font-size: 18px; font-weight: 300; text-transform: none;">Subscribe</section>
+
+
+
               </section>
             </section>
           </section>
