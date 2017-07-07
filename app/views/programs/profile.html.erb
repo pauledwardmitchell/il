@@ -21,8 +21,8 @@
                   <section style="font-size: 43px; font-weight: 500;">$11.99</section>
                   <section style="font-size: 16px; font-weight: 300; font-style: oblique; text-transform: none;">per month</section>
                 </section>
-                <%# Here is where I started experimenting%>
-                <%= form_tag monthly_subscription_path do %>
+
+                <%= form_tag(monthly_subscription_path, {:class => 'subscribe-button'})  do %>
                   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                           data-description="A month's subscription"
@@ -33,9 +33,8 @@
                   </script>
                   <script>
                     document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
-                    document.getElementsByClassName("stripe-button-el")[0].style.border = 'none';
                   </script>
-                  <button type="submit" style="width: 100%; padding: 16px; align-self: flex-end; border-radius: 0px 0px 5px 5px; background-color: rgb(255, 139, 139); box-sizing: border-box; font-size: 18px; font-weight: 300; text-transform: none;">Subscribe</button>
+                  <button type="submit" style="background-color: rgb(255, 139, 139); font-size: 18px; font-weight: 300; text-transform: none; border: none; font-family: Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;">Subscribe</button>
                 <% end %>
 
               </section>
