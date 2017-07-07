@@ -1,5 +1,52 @@
 const CategoryBox = React.createClass({
 
+  getInitialState: function() {
+    return { expanded: false }
+  },
+
+  handleClick: function() {
+    this.setState( { expanded: !this.state.expanded } )
+  },
+
+  renderBoxes: function() {
+    if (this.state.expanded === false) {
+      return(
+        this.props.programs.slice(0,3).map((program) => {
+            return <ProgramLittleSquare
+                     key={program.id}
+                     program={program}
+                     access={this.props.access}/>
+            }
+        )
+      )
+    } else {
+      return(
+        this.props.programs.map((program) => {
+            return <ProgramLittleSquare
+                     key={program.id}
+                     program={program}
+                     access={this.props.access}/>
+            }
+        )
+      )
+    }
+  },
+
+  renderButton: function() {
+
+    if (this.state.expanded === false) {
+      return(
+        <a onClick={this.handleClick} style={{fontSize: 18,
+    fontWeight: 400, color: 'white'}}>Show all</a>
+      )
+    } else {
+      return(
+        <a onClick={this.handleClick} style={{fontSize: 18,
+    fontWeight: 400, color: 'white'}}>Show less</a>
+      )
+    }
+
+  },
 
   render: function() {
 
@@ -39,13 +86,9 @@ const CategoryBox = React.createClass({
 
         <section style={styles.alignment}>
 
-          {this.props.programs.map((program) => {
-            return <ProgramLittleSquare
-                     key={program.id}
-                     program={program}
-                     access={this.props.access}/>
-            }
-          )}
+          {this.renderBoxes()}
+          {this.renderButton()}
+
         </section>
 
       </section>
