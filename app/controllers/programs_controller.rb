@@ -25,6 +25,10 @@ class ProgramsController < ApplicationController
     @teachers = Teacher.all.order(:last_name)
   end
 
+  def profile
+    @user = current_user
+  end
+
   def teacher
     @teacher = Teacher.first
     @programs = Program.take(10)

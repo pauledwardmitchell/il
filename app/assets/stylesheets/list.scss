@@ -4,4 +4,22 @@
   padding-bottom: 48px;
 }
 
+.stripe-button-el {
+  display: none;
 
+  span {
+    display: none;
+  }
+}
+
+.subscribe-button {
+  width: 100%;
+  padding: 16px;
+  align-self: flex-end;
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgb(255, 139, 139);
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: none;
+}
