@@ -10,9 +10,11 @@
 
         <section style='position: relative;'>
 
-          <%= react_component 'CategoryBox', { programs: @programs, access: @access, title: 'Recommended For You'} %>
+          <%= react_component 'CategoryBox', { programs: @recommended_programs, access: @access, title: 'Recommended For You'} %>
 
-          <%= react_component 'CategoryBox', { programs: @programs, access: @access, title: 'Sacramental Preparation'} %>
+          <%= react_component 'CategoryBox', { programs: @sacramental_prep_programs, access: @access, title: 'Sacramental Preparation'} %>
+
+          <%= react_component 'CategoryBox', { programs: @all_programs, access: @access, title: 'All Programs'} %>
 
         </section>
 
