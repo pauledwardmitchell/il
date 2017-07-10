@@ -85,11 +85,10 @@ const CategoryBox = React.createClass({
         <section style={styles.title}>{this.props.title}</section>
 
         <section style={styles.alignment}>
-
           {this.renderBoxes()}
-          {this.renderButton()}
-
         </section>
+
+          {this.renderButton()}
 
       </section>
     )

@@ -14,7 +14,9 @@ class ProgramsController < ApplicationController
   end
 
   def list
-    @programs = Program.take(12)
+    @recommended_programs = Program.take(5)
+    @sacramental_prep_programs = Program.take(8)
+    @all_programs = Program.all
     @access = current_user.access
   end
 
