@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "programs#landing"
 
-  # get '/test', to: 'programs#test'
   get 'list', to: 'programs#list'
   get '/teachers', to: 'programs#teachers'
   get '/profile', to: 'programs#profile'
-  # get '/teacher', to: 'programs#teacher'
 
+  resources :tracks, only: [:show]
+
+  #teachers:
   get 'michael-jordan-laskey', to: 'programs#michaeljordanlaskey'
   get 'gen-jordan-laskey', to: 'programs#genjordanlaskey'
   get 'collen-mayer', to: 'programs#collenmayer'
@@ -16,12 +17,11 @@ Rails.application.routes.draw do
   get 'aimee-shelide-mayer', to: 'programs#aimeeshelidemayer'
   get 'casey-stanton', to: 'programs#caseystanton'
 
-
+  #programs:
   get 'the-way-of-all-the-earth', to: 'programs#thewayofalltheearth'
   get 'to-bless-the-space-between-us', to: 'programs#toblessthespacebetweenus'
 
-  resources :tracks, only: [:show]
-
+  #stripe:
   post '/webhook', to: 'stripe#webhook'
 
   resources :charges
